@@ -1,0 +1,15 @@
+{
+  "name": "btl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generate_room.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cassandra-driver": "^4.6.0",
+    "faker": "^5.1.0"
+  }
+}
