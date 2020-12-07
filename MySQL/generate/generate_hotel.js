@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     database: 'hotel',
-    port: 3307,
+    port: 3306,
     multipleStatements: true,
     connectTimeout: 3600000
 })

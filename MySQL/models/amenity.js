@@ -21,9 +21,9 @@ const timer = (startTime, curRow) => {
 }
 try {
     connection.connect();
-    let query = "CREATE TABLE room_by_hotel (hotel_id int, room_number int, is_vailable boolean, PRIMARY KEY (hotel_id,room_number));";
+    let query = "CREATE TABLE amenity (amenity_id int, amenity_name varchar(255), PRIMARY KEY (amenity_id));";
     connection.query(query);
-    console.log("room table created!!!");
+    console.log("amenity table created!!!");
 
     connection.end();
 } catch (error) {

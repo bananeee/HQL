@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     database: 'hotel',
-    port: 3307,
+    port: 3306,
     multipleStatements: true
 })
 const timer = (startTime, curRow) => {
@@ -21,9 +21,9 @@ const timer = (startTime, curRow) => {
 }
 try {
     connection.connect();
-    let query = "CREATE TABLE amenity_by_hotel (hotel_id int, amenity_name text, PRIMARY KEY (hotel_id, amenity_name));";
+    let query = "CREATE TABLE amenity_by_hotel (amenity_id int, hotel_id int, PRIMARY KEY (amenity_id, hotel_id));";
     connection.query(query);
-    console.log("room table created!!!");
+    console.log("amenity by hotel table created!!!");
 
     connection.end();
 } catch (error) {

@@ -46,7 +46,7 @@ const mainFunction = async () => {
             randomNumber = generateRandomNumber(999990),
             query += `INSERT INTO amenity_by_hotel (hotel_id, amenity_name) values(${randomNumber}, \'${randomAmenity}\')`;
         }
-        console.log("Generate hotel successfully!!!");
+        console.log("Generate amenity successfully!!!");
         const executeTime = process.hrtime(startTime);
         console.log('Execute time: ' + (executeTime[0] + executeTime[1] / 1000000000) + 's');
         client.shutdown();

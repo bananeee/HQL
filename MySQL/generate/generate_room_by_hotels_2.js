@@ -1,7 +1,7 @@
 const mysql = require('mysql')
 const faker = require('faker')
 
-const TOTAL_RECORD = 1000;
+const TOTAL_RECORD = 100000000;
 const TOTAL_ROOM_EACH_HOTEL = 100;
 
 const connection = mysql.createPool({
@@ -9,7 +9,7 @@ const connection = mysql.createPool({
     host: 'localhost',
     user: 'root',
     database: 'hotel',
-    port: 3307,
+    port: 3306,
     multipleStatements: true,
     connectTimeout: 3600000
 })
