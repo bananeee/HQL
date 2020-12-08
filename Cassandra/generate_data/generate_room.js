@@ -36,7 +36,7 @@ const mainFunction = async () => {
                     query += ' APPLY BATCH;';
                     await client.execute(query);
                     query = 'BEGIN UNLOGGED BATCH '
-                } else if (i === TOTAL_RECORD) {
+                } else if ((i * TOTAL_ROOM_EACH_HOTEL + j) === TOTAL_RECORD) {
                     query += ' APPLY BATCH;';
                     await client.execute(query);
                 }
